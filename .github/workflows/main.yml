@@ -1,9 +1,6 @@
 name: CI/CD Development Deploy
 
 on:
-  # push:
-  #   branches:
-  #     - development
   pull_request:
     branches: [master]
 
@@ -16,7 +13,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: "12.x"
-          
+        name: "Test Suite"
       - working-directory: ./frontend
       - run: npm install
       - run: npm run test
