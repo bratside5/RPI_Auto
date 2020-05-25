@@ -8,9 +8,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. Testing Github Build
-          Action / CI/CD deploy + Testing via Jest / This should pass the CI
-          Test now
+          Edit <code>src/App.js</code> and save to reload.
+          <br /> Testing Github Build Action / CI/CD deploy + Testing via Jest{" "}
+          <br /> This should pass the CI Test now
         </p>
         <a
           className="App-link"
