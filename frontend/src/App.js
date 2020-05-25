@@ -9,7 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload. Testing Github Build
-          Action / CI/CD deploy + Testing via Jest
+          Action / CI/CD deploy + Testing
         </p>
         <a
           className="App-link"
