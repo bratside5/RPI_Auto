@@ -21,7 +21,6 @@ function App() {
           <RetroPie />
         </GridWrapper>
       </MainWrapper>
-      <Footer />
     </>
   );
 }
