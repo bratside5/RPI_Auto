@@ -10,7 +10,7 @@ app.get("/api", (req, res) => {
 
 app.get("/api/retropie", (req, res) => {
   const { spawn } = require("child_process");
-  const ls = spawn("ls");
+  const ls = spawn("emulationstation");
   ls.stdout.on("data", (data) => {
     console.log(`stdout: ${data}`);
     res.json("Loaded Retropie");
