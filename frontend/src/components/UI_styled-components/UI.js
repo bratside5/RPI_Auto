@@ -6,3 +6,5 @@ export const MenuContainer = tw.a`flex items-center justify-center h-48 max-h-fu
 
 export const MenuImage = tw.img`object-contain object-cover object-scale-down h-48`;
 export const MenuTitle = tw.div``;
+
+export const RPMenuContainer = tw.button`flex items-center justify-center h-48 max-h-full bg-gray-700 align-middle content-start p-6 shadow-lg rounded-lg`;
