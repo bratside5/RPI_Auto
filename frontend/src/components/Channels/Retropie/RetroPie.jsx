@@ -2,20 +2,29 @@ import React from "react";
 import { RPMenuContainer, MenuImage } from "../../UI_styled-components/UI";
 import RetroPieLogo from "../../../assets/RetroPie.png";
 import useAxios from "axios-hooks";
+import Circle from "@bit/joshk.react-spinners-css.circle";
 
 const RetroPie = () => {
   const [
-    { data, loading, error },
+    { loading, error },
     refetch,
   ] = useAxios("http://localhost:5000/api/retropie", { manual: true });
 
-  const refreshPage = () => {
-    setTimeout(() => {}, 5000);
-    window.location.reload(false);
-  };
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return (<p>Error</p>), refreshPage();
+  if (loading)
+    return (
+      <>
+        <RPMenuContainer>
+          <Circle color="#be97e8" />
+        </RPMenuContainer>
+      </>
+    );
+  if (error)
+    return (
+      <RPMenuContainer>
+        <Circle color="#be97e8" />
+        <p>Error</p>
+      </RPMenuContainer>
+    );
 
   return (
     <>
