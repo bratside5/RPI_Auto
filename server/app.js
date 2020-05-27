@@ -9,8 +9,10 @@ app.get("/api", (req, res) => {
   res.json({ msg: "API Root... Welcome 😎 " });
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/../frontend/build/index.html"));
+app.get("/api/systemdata", (req, res) => {
+  const time = new Date();
+  res.json({ time: time.toString() });
+  console.log(time);
 });
 
 app.get("/api/retropie", (req, res) => {
