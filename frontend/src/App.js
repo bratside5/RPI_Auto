@@ -7,7 +7,6 @@ import Spotify from "./components/Channels/Spotify/Spotify";
 import Netflix from "./components/Channels/Netflix/Netflix";
 import Prime from "./components/Channels/Prime/Prime";
 import RetroPie from "./components/Channels/Retropie/RetroPie";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
