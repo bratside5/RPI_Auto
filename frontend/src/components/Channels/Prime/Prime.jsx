@@ -1,6 +1,6 @@
 import React from "react";
 import { MenuContainer, MenuImage } from "../../UI_styled-components/UI";
-import PrimeLogo from "../../../assets/prime-video-logo-2020.svg";
+import PrimeLogo from "../../../assets/prime-video-logo.svg";
 
 const Prime = () => {
   return (

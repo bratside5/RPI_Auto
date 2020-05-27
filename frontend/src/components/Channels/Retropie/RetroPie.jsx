@@ -1,5 +1,9 @@
 import React from "react";
-import { RPMenuContainer, MenuImage } from "../../UI_styled-components/UI";
+import {
+  RPMenuContainer,
+  MenuImage,
+  ErrorText,
+} from "../../UI_styled-components/UI";
 import RetroPieLogo from "../../../assets/RetroPie.png";
 import useAxios from "axios-hooks";
 import Circle from "@bit/joshk.react-spinners-css.circle";
@@ -21,8 +25,7 @@ const RetroPie = () => {
   if (error)
     return (
       <RPMenuContainer>
-        <Circle color="#be97e8" />
-        <p>Error</p>
+        <ErrorText>Not Loading... 💩 </ErrorText>
       </RPMenuContainer>
     );
 

@@ -4,9 +4,9 @@ export const MainWrapper = tw.div`flex items-center justify-center align-middle 
 export const GridWrapper = tw.div`grid grid-cols-4 gap-4 items-center p-3`;
 
 export const MenuContainer = tw.a`flex items-center justify-center h-48 max-h-full bg-gray-700 align-middle content-start p-6 shadow-lg rounded-lg`;
-export const MenuImage = tw.img`object-contain object-cover object-scale-down h-48`;
+export const MenuImage = tw.img`object-contain object-cover object-scale-down h-32 p-3`;
 export const MenuTitle = tw.div``;
-
+export const MoreImage = tw.img`object-contain object-cover object-scale-down h-24 p-3`;
 export const RPMenuContainer = tw.button`flex items-center justify-center h-48 max-h-full bg-gray-700 align-middle content-start p-6 shadow-lg rounded-lg`;
-
+export const ErrorText = tw.div`text-xl text-white items-center justify-center align-middle content-start`;
 export const MenuFooter = tw.div`min-w-full max-h-full mt-2 p-3 h-12 bg-gray-700 overflow-auto `;
