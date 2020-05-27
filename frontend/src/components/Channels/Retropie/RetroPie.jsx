@@ -9,8 +9,13 @@ const RetroPie = () => {
     refetch,
   ] = useAxios("http://localhost:5000/api/retropie", { manual: true });
 
+  const refreshPage = () => {
+    setTimeout(() => {}, 5000);
+    window.location.reload(false);
+  };
+
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error!</p>;
+  if (error) return (<p>Error</p>), refreshPage();
 
   return (
     <>
