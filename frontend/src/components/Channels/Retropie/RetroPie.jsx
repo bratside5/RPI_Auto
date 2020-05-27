@@ -5,7 +5,7 @@ import useAxios from "axios-hooks";
 
 const RetroPie = () => {
   const [
-    { data, loading, error },
+    { loading, error },
     refetch,
   ] = useAxios("http://localhost:5000/api/retropie", { manual: true });
 

@@ -1,11 +1,16 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const cors = require("cors");
 
 app.use(cors());
 
 app.get("/api", (req, res) => {
   res.json({ msg: "API Root... Welcome 😎 " });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/../frontend/build/index.html"));
 });
 
 app.get("/api/retropie", (req, res) => {
