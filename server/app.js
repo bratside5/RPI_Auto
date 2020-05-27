@@ -20,7 +20,7 @@ app.get("/api/retropie", (req, res) => {
   const ls = spawn("emulationstation");
   ls.stdout.on("data", (data) => {
     console.log(`stdout: ${data}`);
-    res.json("Loaded Retropie");
+    // res.json("Loaded Retropie");
   });
 
   ls.stderr.on("data", (data) => {
