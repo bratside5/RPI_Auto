@@ -20,12 +20,11 @@ app.post("/payload", function (req, res) {
 
   console.log("pulling code from GitHub...");
   exec("cd ~/home/pi/RPI_Auto", execCallback);
-  exec("pwd", execCallback);
-
   exec("git reset --hard", execCallback);
   exec("git pull -f", execCallback);
-  exec("cd server && npm install", execCallback);
-  exec("cd ../frontend && npm install && npm run build", execCallback);
+  exec("cd ~/home/pi/RPI_Auto/frontend", execCallback);
+  exec("npm i", execCallback);
+  exec("npm run build", execCallback);
 });
 
 app.listen(6000, function () {
