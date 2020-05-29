@@ -21,7 +21,7 @@ app.post("/payload", function (req, res) {
   console.log("pulling code from GitHub...");
 
   // reset any changes that have been made locally
-  exec("git -C ../RPI_Auto  reset --hard", execCallback);
+  exec("pwd && git -C ../RPI_Auto  reset --hard", execCallback);
 
   // and ditch any files that have been added locally too
   exec("git -C ../RPI_Auto clean -df", execCallback);
