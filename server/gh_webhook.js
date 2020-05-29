@@ -34,7 +34,7 @@ app.post("/payload", function (req, res) {
 });
 
 app.listen(6000, function () {
-  console.log("listening port 6000");
+  console.log("listening on 6000");
 });
 
 function execCallback(err, stdout, stderr) {
