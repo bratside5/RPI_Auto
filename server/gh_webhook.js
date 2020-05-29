@@ -30,7 +30,7 @@ app.post("/payload", function (req, res) {
   exec("git pull -f", execCallback);
 
   // and npm install with --production
-  exec("npm install", execCallback);
+  exec("cd server && npm install", execCallback);
 });
 
 app.listen(6000, function () {
