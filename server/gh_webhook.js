@@ -14,9 +14,9 @@ app.get("/payload", function (req, res) {
 app.post("/payload", function (req, res) {
   //verify that the payload is a push from the correct repo
   //verify repository.name ==  or repository.full_name
-  console.log(
-    req.body.pusher.name + " just pushed to " + req.body.repository.name
-  );
+  //   console.log(
+  //     req.body.pusher.name + " just pushed to " + req.body.repository.name
+  //   );
 
   console.log("pulling code from GitHub...");
 
