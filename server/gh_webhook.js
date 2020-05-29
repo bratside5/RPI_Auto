@@ -22,7 +22,7 @@ app.post("/payload", function (req, res) {
   exec("cd /home/pi/RPI_Auto", execCallback);
   exec("git reset --hard", execCallback);
   exec("git pull -f", execCallback);
-  exec("cd /home/pi/RPI_Auto/frontend", execCallback);
+  exec("cd frontend", execCallback);
   exec("npm i", execCallback);
   exec("npm run build", execCallback);
 });
