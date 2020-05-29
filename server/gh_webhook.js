@@ -30,7 +30,7 @@ app.post("/payload", function (req, res) {
   exec("cd ~/home/pi/RPI_Auto && git -C  pull -f", execCallback);
 
   // and npm install with --production
-  exec("cd ~/home/pi/RPI_Auto && npm -C  install --production", execCallback);
+  exec("cd ~/home/pi/RPI_Auto && npm install", execCallback);
 });
 
 app.listen(6000, function () {
