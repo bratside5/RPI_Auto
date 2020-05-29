@@ -24,13 +24,13 @@ app.post("/payload", function (req, res) {
   //   exec("cd ~/home/pi/RPI_Auto && git reset --hard", execCallback);
 
   // and ditch any files that have been added locally too
-  //   exec("cd ~/home/pi/RPI_Auto && git clean -df", execCallback);
+  exec("cd ~/home/pi/RPI_Auto", execCallback);
 
   // now pull down the latest
-  exec("cd ~/home/pi/RPI_Auto && git pull -f", execCallback);
+  exec("git pull -f", execCallback);
 
   // and npm install with --production
-  exec("cd ~/home/pi/RPI_Auto && npm install", execCallback);
+  exec("npm install", execCallback);
 });
 
 app.listen(6000, function () {
