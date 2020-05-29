@@ -21,16 +21,16 @@ app.post("/payload", function (req, res) {
   console.log("pulling code from GitHub...");
 
   // reset any changes that have been made locally
-  exec("git -C /home/pi/RPI_Auto  reset --hard", execCallback);
+  exec("git -C ../RPI_Auto  reset --hard", execCallback);
 
   // and ditch any files that have been added locally too
-  exec("git -C /home/pi/RPI_Auto clean -df", execCallback);
+  exec("git -C ../RPI_Auto clean -df", execCallback);
 
   // now pull down the latest
-  exec("git -C /home/pi/RPI_Auto pull -f", execCallback);
+  exec("git -C ../RPI_Auto pull -f", execCallback);
 
   // and npm install with --production
-  exec("npm -C /home/pi/RPI_Auto install --production", execCallback);
+  exec("npm -C ../RPI_Auto install --production", execCallback);
 });
 
 app.listen(6000, function () {
