@@ -1,9 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+// import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-// Testing Webhook + Testing Next Push + Testing again...
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCheckSquare,
+  faCoffee,
+  faPowerOff,
+  faRetweet,
+  faRobot,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, faCheckSquare, faCoffee, faPowerOff, faRetweet, faRobot);
 
 ReactDOM.render(
   <React.StrictMode>

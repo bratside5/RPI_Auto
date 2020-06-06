@@ -25,7 +25,12 @@ const RetroPie = () => {
   if (error)
     return (
       <RPMenuContainer>
-        <ErrorText>Not Loading... 💩 </ErrorText>
+        <ErrorText>
+          Not Loading...{" "}
+          <span role="img" aria-label="#">
+            💩
+          </span>{" "}
+        </ErrorText>
       </RPMenuContainer>
     );
 

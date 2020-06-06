@@ -17,9 +17,9 @@ app.get("/api/systemdata", (req, res) => {
 
 app.get("/api/retropie", (req, res) => {
   const { spawn } = require("child_process");
-  const ls = spawn('emulationstation');
+  const ls = spawn("emulationstation");
   ls.stdout.on("data", (data) => {
-    console.log(`stdout: ${data}, Running Emulation Station`)
+    console.log(`stdout: ${data}, Running Emulation Station`);
   });
 
   ls.stderr.on("data", (data) => {
@@ -27,8 +27,8 @@ app.get("/api/retropie", (req, res) => {
   });
 
   ls.on("close", (code) => {
-    console.log(`child process exited with code ${code},`)
-    res.json({ msg: "RetroPie has exited" })
+    console.log(`child process exited with code ${code},`);
+    res.json({ msg: "RetroPie has exited" });
   });
 });
 

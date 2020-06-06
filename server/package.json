@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "power": "nodemon power",
     "dev": "nodemon server",
     "prod": "node server"
   },
@@ -11,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "puppeteer": "^3.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

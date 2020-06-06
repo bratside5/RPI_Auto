@@ -7,10 +7,23 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Launch Chrome against localhost",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}",
-      "runtimeExecutable": "/usr/bin/chromium-browser"
+      "name": "Launch React on Chromium",
+      "runtimeExecutable": "/usr/bin/chromium-browser",
+      "url": "http://localhost:3000"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Retropie Server",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/server/server.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Power Options",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/server/power.js"
     }
   ]
 }
