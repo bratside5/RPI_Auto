@@ -9,7 +9,7 @@ app.use(cors());
 app.get("/api/power/shutdown", (req, res) => {
   const { spawn } = require("child_process");
   // const ls = spawn("ls", ["-l"]);
-  const ls = spawn("shutdown", ["now"]);
+  const ls = spawn("sudo"[("shutdown", "now")]);
   ls.stdout.on("data", (data) => {
     console.log(`stdout: ${data}, Shutting Down`);
   });
@@ -29,7 +29,7 @@ app.get("/api/power/shutdown", (req, res) => {
 app.get("/api/power/reset", (req, res) => {
   const { spawn } = require("child_process");
   // const ls = spawn("ls", ["-l"]);
-  const ls = spawn("reboot", [""]);
+  const ls = spawn("sudo", ["reboot"]);
   ls.stdout.on("data", (data) => {
     console.log(`stdout: ${data}, Rebooting`);
   });
